@@ -1,0 +1,31 @@
+/* the sample appendaround element */
+.sample {
+	padding: 1em;
+	background: tan;
+}
+  
+.baz {
+	display: block;
+}
+.foo,
+.bar {
+	display: none; 
+}
+  
+@media (min-width: 30em){
+	.bar {
+	  display: block;
+	}
+	.foo, .baz {
+	  display: none; 
+	}
+}
+  
+@media (min-width: 50em){
+	div.foo {
+	  display: block;
+	}
+	div.bar, div.baz {
+	  display: none; 
+	}
+}
