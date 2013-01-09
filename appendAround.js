@@ -18,10 +18,8 @@ how-to:
 	        $self.appendTo( $set.filter( ":visible:eq(0)" ) );
 	      }
 	    }
-      
-	    appendToVisibleContainer();
-      
-	    $(window).resize( appendToVisibleContainer );
+            
+	    $(window).resize(appendToVisibleContainer).trigger("resize");
       
 	  });
 	};
