@@ -17,7 +17,7 @@ how-to:
 	        $set = $( "["+ att +"='" + attval + "']" );
 
 		function isHidden( elem ){
-			return $(elem).css( "display" ) === "none";
+			return $(elem).is( ":hidden" );
 		}
 
 		function appendToVisibleContainer(){
