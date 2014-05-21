@@ -2,69 +2,74 @@
 <html>
 <head>
 <meta charset=utf-8>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>AppendAround Demo</title>
-<style>
-
-  body {
-    font-family: sans-serif; 
-    max-width: 85%;
-    margin: 3em auto;
-  }
-  h1 {
-    font-size: 1.3em; 
-  }
-  p,li {
-    font-size: .9em;
-  }
-</style>
+	<link href="docs.css" rel="stylesheet">
+	<style>
+		body {
+			font-family: sans-serif;
+			max-width: 85%;
+			margin: 3em auto;
+		}
+		h1 {
+			font-size: 1.3em;
+		}
+		p,li {
+			font-size: .9em;
+		}
+	</style>
 <link href="appendAround-sample.css" rel="stylesheet">
 </head>
-<body>
+<body class="docs">
 
-  <h1>AppendAround: A Responsive Markup Pattern</h1>
-  <p>[c]@scottjehl, Filament Group, Inc. MIT/GPL</p>
-  
-  <p>Sometimes, complex responsive layouts are hindered by source order. This pattern allows you to control where an element should be in the DOM by setting one of its potential parent containers (paired in the source with matching <code>data-set</code> attributes) to <code>display: block</code> at a particular breakpoint.</p>
-  
-  <p>You might find this useful when embedding ads that need to be early in the source on a small-screen device, but later in the source in a desktop scenario. Or perhaps you'd use it to serve mobile-first navigation at the end of the page, while ensuring it's up top at wider viewports. Either way, this pattern can alleviate the need for server-side reliance when negotiating source-order discrepancies across layouts.</p>
-  
-  <!-- potential container for appendAround -->
-  <div class="foo" data-set="foobarbaz"></div>
-  
-  <ul>
-   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-   <li>Aliquam tincidunt mauris eu risus.</li>
-   <li>Vestibulum auctor dapibus neque.</li>
-</ul>
-  
-  <!-- potential container for appendAround -->
-  <div class="bar" data-set="foobarbaz"></div>
-  
-  <ul>
-   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-   <li>Aliquam tincidunt mauris eu risus.</li>
-   <li>Vestibulum auctor dapibus neque.</li>
-</ul>
-  
-    
-  <!-- initial container for appendAround -->
-  <div class="baz" data-set="foobarbaz">
-  
-    <p class="sample">Sample appendAround Element</p>
-  
-  </div>
-  
-  
-  <ul>
-	   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-	   <li>Aliquam tincidunt mauris eu risus.</li>
-	   <li>Vestibulum auctor dapibus neque.</li>
-	</ul>
+	<div class="header">
+		<a href="http://filamentgroup.com/"><h1 id="fg-logo">Filament Group</h1></a>
+	</div>
+	<div class="docs-main">
+		<h3>AppendAround: A Responsive Markup Pattern</h3>
+		<p>[c]@scottjehl, Filament Group, Inc. MIT/GPL</p>
 
- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
- <script src="appendAround.js"></script>
- <script>
+		<p>Sometimes, complex responsive layouts are hindered by source order. This pattern allows you to control where an element should be in the DOM by setting one of its potential parent containers (paired in the source with matching <code>data-set</code> attributes) to <code>display: block</code> at a particular breakpoint.</p>
+
+		<p>You might find this useful when embedding ads that need to be early in the source on a small-screen device, but later in the source in a desktop scenario. Or perhaps you'd use it to serve mobile-first navigation at the end of the page, while ensuring it's up top at wider viewports. Either way, this pattern can alleviate the need for server-side reliance when negotiating source-order discrepancies across layouts.</p>
+
+		<!-- potential container for appendAround -->
+		<div class="foo" data-set="foobarbaz"></div>
+
+		<ul>
+			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+			<li>Aliquam tincidunt mauris eu risus.</li>
+			<li>Vestibulum auctor dapibus neque.</li>
+		</ul>
+
+		<!-- potential container for appendAround -->
+		<div class="bar" data-set="foobarbaz"></div>
+
+		<ul>
+			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+			<li>Aliquam tincidunt mauris eu risus.</li>
+			<li>Vestibulum auctor dapibus neque.</li>
+		</ul>
+
+
+		<!-- initial container for appendAround -->
+		<div class="baz" data-set="foobarbaz">
+
+			<p class="sample">Sample appendAround Element</p>
+
+		</div>
+
+
+		<ul>
+			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+			<li>Aliquam tincidunt mauris eu risus.</li>
+			<li>Vestibulum auctor dapibus neque.</li>
+		</ul>
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="appendAround.js"></script>
+	<script>
 	/* Call appendAround */
 	$( ".sample" ).appendAround();
 </script>
