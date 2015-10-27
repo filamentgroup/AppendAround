@@ -1,0 +1,21 @@
+{
+  "name": "AppendAround",
+  "main": "AppendAround.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/filamentgroup/AppendAround",
+  "authors": [
+    "Scott Jehl <@scottjehl>",
+    "Filament Group, Inc"
+  ],
+  "description": "A pattern for responsive markup",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "Responsive",
+    "Design",
+    "Filament",
+    "Group"
+  ],
+  "license": "MIT/GPL"
+}
