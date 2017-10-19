@@ -2,7 +2,7 @@
 
 ## A pattern for responsive markup
 
-- [c]2012, @scottjehl, Filament Group, Inc. MIT/GPL 
+- © 2012, @scottjehl, Filament Group, Inc. MIT/GPL 
 
 ## How To
 
@@ -16,67 +16,70 @@
 
 ## Sample markup
 
-	  <!-- potential container for appendAround -->
-	  <div class="foo" data-set="foobarbaz"></div>
-  
-	  <ul>
-	   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-	   <li>Aliquam tincidunt mauris eu risus.</li>
-	   <li>Vestibulum auctor dapibus neque.</li>
-    </ul>
-  
-	  <!-- potential container for appendAround -->
-	  <div class="bar" data-set="foobarbaz"></div>
-  
-	  <ul>
-	   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-	   <li>Aliquam tincidunt mauris eu risus.</li>
-	   <li>Vestibulum auctor dapibus neque.</li>
-	</ul>
-  
-    
-	  <!-- initial container for appendAround -->
-	  <div class="baz" data-set="foobarbaz">
-  
-	    <p class="sample">Sample appendAround Element</p>
-  
-	  </div>
+```
+<!-- potential container for appendAround -->
+<div class="foo" data-set="foobarbaz"></div>
+
+<ul>
+	<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+	<li>Aliquam tincidunt mauris eu risus.</li>
+	<li>Vestibulum auctor dapibus neque.</li>
+</ul>
+
+<!-- potential container for appendAround -->
+<div class="bar" data-set="foobarbaz"></div>
+
+<ul>
+	<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+	<li>Aliquam tincidunt mauris eu risus.</li>
+	<li>Vestibulum auctor dapibus neque.</li>
+</ul>
+
+<!-- initial container for appendAround -->
+<div class="baz" data-set="foobarbaz">
+	<p class="sample">Sample appendAround Element</p>
+</div>
+```
 
 ## Sample CSS
 
-   	/* the sample appendaround element */
-	.sample {
-		padding: 1em;
-		background: tan;
-	}
-  
-	.baz {
+```
+/* the sample appendaround element */
+.sample {
+	padding: 1em;
+	background: tan;
+}
+
+.baz {
+	display: block;
+}
+.foo,
+.bar {
+	display: none; 
+}
+
+@media (min-width: 30em){
+	.bar {
 		display: block;
 	}
-	.foo,
-	.bar {
+	.foo, .baz {
 		display: none; 
 	}
-  
-	@media (min-width: 30em){
-		.bar {
-		  display: block;
-		}
-		.foo, .baz {
-		  display: none; 
-		}
+}
+
+@media (min-width: 50em){
+	div.foo {
+		display: block;
 	}
-  
-	@media (min-width: 50em){
-		div.foo {
-		  display: block;
-		}
-		div.bar, div.baz {
-		  display: none; 
-		}
+	div.bar, div.baz {
+		display: none; 
 	}
+}
+```
 
 
 ## Sample JavaScript call
 
-    $( ".sample" ).appendAround();
+```
+$( ".sample" ).appendAround();
+```
