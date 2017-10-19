@@ -4,14 +4,15 @@
 
 - [c]2012, @scottjehl, Filament Group, Inc. MIT/GPL 
 
-## how-to
-	1. Insert potential element containers throughout the DOM
-	2. give each container a data-set attribute with a value that matches all other containers' values
-	3. Place your appendAround content in one of the potential containers
-	4. Configure your CSS to only display one potential container at a time (and display others depending on @media conditions in your CSS)
-	4. Call appendAround() on that element when the DOM is ready, and it'll keep itself in a visibile container at all times
+## How To
 
-## Demos: 
+1. Insert potential element containers throughout the DOM
+1. give each container a data-set attribute with a value that matches all other containers' values
+1. Place your appendAround content in one of the potential containers
+1. Configure your CSS to only display one potential container at a time (and display others depending on @media conditions in your CSS)
+1. Call appendAround() on that element when the DOM is ready, and it'll keep itself in a visibile container at all times
+
+## Demos
 
 http://master.origin.appendaround.fgview.com/demo/ (or, for a branch preview, replace "master" with a branch name).
 
