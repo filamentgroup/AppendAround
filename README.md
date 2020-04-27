@@ -12,7 +12,7 @@
 1. Configure your CSS to only display one potential container at a time (and display others depending on @media conditions in your CSS)
 1. Call appendAround() on that element when the DOM is ready, and it'll keep itself in a visibile container at all times
 
-## [Demo](https://master-origin-appendaround.fgview.com/demo/)
+## [Demo](http://filamentgroup.github.io/AppendAround/)
 
 ## Sample markup
 
